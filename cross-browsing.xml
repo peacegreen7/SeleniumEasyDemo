@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Webdriver Instances Testing" parallel="methods" thread-count="2">
+    <test name="Driver Factory Test - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="test.parallel.TestDriverInstances"/>
+        </classes>
+    </test>
+    <test name="Driver Factory Test - Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="test.parallel.TestDriverInstances"/>
+        </classes>
+    </test>
+</suite>
