@@ -1,7 +1,6 @@
 package test.example;
 
 import model.pages.CheckboxDemo;
-import model.pages.SimpleFormDemo;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import utils.Webdriver;
@@ -15,16 +14,35 @@ public class CheckboxDemoTest {
         driver.manage().window().maximize();
 
         CheckboxDemo checkboxDemo = new CheckboxDemo(driver);
-
         checkboxDemo.headerComponent().selectInputFormsOption(driver, "Checkbox Demo");
-//        String actual = checkboxDemo.headerComponent().getVerifyContentPage(driver);
 
-//        Assert.assertEquals(actual, "This would be your first example to start with Selenium.");
+        //verify page title
+        String actual = checkboxDemo.headerComponent().getVerifyContentPage(driver);
+        Assert.assertEquals(actual, "This would be a basic example to start with checkboxes using selenium.");
 
-       checkboxDemo.checkOnCheckbox(driver);
-       checkboxDemo.verifyCheckbox(driver, "Success - Check box is checked");
+        /* ================================= Single checkbox section =======================================*/
+        //checked on single checkbox
+        checkboxDemo.checkOnCheckbox();
+        checkboxDemo.verifyCheckbox("Success - Check box is checked");
+        //unchecked on single checkbox
+        checkboxDemo.checkOnCheckbox();
+        if (!checkboxDemo.getCheckboxElement().isSelected()) {
+            System.out.println("Uncheck single checkbox successfully");
+        }
 
-        // Two Input Field
+        /* ================================= Multiple checkbox section =======================================*/
+        //check one option in list option
+        checkboxDemo.getMultipleOption(2).click();
+        Assert.assertEquals(checkboxDemo.getCheckBtnText(), "Check All");
+        //select all options
+        checkboxDemo.toggleAllOption();
+        Assert.assertEquals(checkboxDemo.getCheckBtnText(), "Uncheck All");
+        //unselect all options
+        checkboxDemo.toggleAllOption();
+        Assert.assertEquals(checkboxDemo.getCheckBtnText(), "Check All");
+
+        //close browser
+        driver.close();
 
     }
 

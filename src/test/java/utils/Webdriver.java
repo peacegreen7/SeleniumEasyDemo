@@ -13,26 +13,10 @@ public class Webdriver {
     public static WebDriver getChromeDriver() {
 
         WebDriver driver;
-
         String path = System.getProperty("user.dir");
-
         String driverPath = path + "//selenium-grid" + "//chromedriver.exe";
-
         System.setProperty("webdriver.chrome.driver", driverPath);
         return new ChromeDriver();
-
-//        RemoteWebDriver remoteWebDriver;
-//        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-//        desiredCapabilities.setPlatform(Platform.ANY);
-//        desiredCapabilities.setBrowserName("chrome");
-//
-//        try {
-//            remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
-//        } catch (Exception e) {
-//            throw new RuntimeException(e.toString());
-//        }
-//
-//        return remoteWebDriver;
 
     }
 
