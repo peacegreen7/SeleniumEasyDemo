@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Webdriver Instances Testing" duration-ms="7551" started-at="2021-07-17T21:33:39 ICT" finished-at="2021-07-17T21:33:46 ICT">
+    <groups>
+    </groups>
+    <test name="Smoke test" duration-ms="7551" started-at="2021-07-17T21:33:39 ICT" finished-at="2021-07-17T21:33:46 ICT">
+      <class name="test.example.DynamicDataLoadingTest">
+        <test-method status="PASS" signature="initWebdriverObject()[pri:0, instance:test.example.DynamicDataLoadingTest@6d2a209c]" name="initWebdriverObject" is-config="true" duration-ms="9" started-at="2021-07-17T21:33:39 ICT" finished-at="2021-07-17T21:33:39 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initWebdriverObject -->
+        <test-method status="PASS" signature="TC_O1()[pri:0, instance:test.example.DynamicDataLoadingTest@6d2a209c]" name="TC_O1" duration-ms="6362" started-at="2021-07-17T21:33:39 ICT" finished-at="2021-07-17T21:33:45 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_O1 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.example.DynamicDataLoadingTest@6d2a209c]" name="afterMethod" is-config="true" duration-ms="1071" started-at="2021-07-17T21:33:45 ICT" finished-at="2021-07-17T21:33:46 ICT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_O1 status=SUCCESS method=DynamicDataLoadingTest.TC_O1()[pri:0, instance:test.example.DynamicDataLoadingTest@6d2a209c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:test.example.DynamicDataLoadingTest@6d2a209c]" name="afterSuite" is-config="true" duration-ms="1140" started-at="2021-07-17T21:33:46 ICT" finished-at="2021-07-17T21:33:47 ICT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- test.example.DynamicDataLoadingTest -->
+    </test> <!-- Smoke test -->
+  </suite> <!-- Webdriver Instances Testing -->
+</testng-results>

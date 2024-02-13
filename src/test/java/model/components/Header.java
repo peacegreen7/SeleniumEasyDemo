@@ -31,6 +31,14 @@ public class Header {
 
     }
 
+    public void selectOthersOption(WebDriver driver, String option) {
+
+        driver.findElement(OtherMenuSelector).click();
+        WebElement webElement = driver.findElement(By.xpath("//a[contains(text(), 'Others')]/ancestor::div[@id='navbar-brand-centered']/descendant::a[text()='" + option + "']"));
+        webElement.click();
+
+    }
+
     public String getVerifyContentPage(WebDriver driver) {
          return driver.findElement(verifyContentPageSelector).getText();
     }
